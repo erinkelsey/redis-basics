@@ -19,6 +19,7 @@ Check that it is connected:
     > shutdown [NOSAVE | SAVE]
 
 NOSAVE: Redis will not save data to disk
+
 SAVE: Redis will save data to disk
 
 ## Basic Key Commands
@@ -27,9 +28,35 @@ SAVE: Redis will save data to disk
 
     > set [key] [value]
 
+Set only if the key does not already exist:
+
+    > set [key] [value] nx
+
+Set only if the key already exists:
+
+    > set [key] [value] xx
+
+### Get and Set
+
+    > getset [key] [new_value]
+
+NOTE: this will return the previous key value. If there is no current value for key, nil is returned, and new value is still saved to key.
+
+### Set Multiple Key-Value Pairs
+
+    > mset [key] [value] [key value ...]
+
+Set only if the key does not already exist:
+
+    > msetnx [key] [value] [key value ...]
+
 ### Get Value for Key
 
     > get [key]
+
+Get multiple keys:
+
+    > get [key1] [key2] ...
 
 ### Show All Keys in DB
 
@@ -49,9 +76,17 @@ Seconds:
 
     > set [key] [value] ex [seconds]
 
+OR:
+
+    > setex [key] [seconds] [value]
+
 Milliseconds:
 
     > set [key] [value] ex [milliseconds]
+
+OR:
+
+    > psetex [key] [milliseconds] [value]
 
 Set expiry for existing key in seconds:
 
