@@ -1,0 +1,3 @@
+# Redis Data Types
+
+## Strings
