@@ -182,3 +182,13 @@ Use 0 for ttl, if not wanting it to expire.
 Serialized-value is the value that is returned when key is dumped. Example: "\n\x17\x17\x00\x00\x00\x12\x00\x00\x00\x03\x00\”
 
 Use REPLACE flag, if you want to overwrite the key, if it is currently in the db.
+
+### Scan Keys
+
+Find keys based on pattern. Will not return all of the keys at the same time, must use cursor to get them.
+
+    > scan [cursor] [MATCH pattern] [COUNT count] [TYPE type]
+
+When cursor returns 0, all keys have been returned.
+
+Use 0 for cursor to start at beginning.
