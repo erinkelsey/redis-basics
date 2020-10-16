@@ -19,7 +19,7 @@ products = {
         "color": "blue",
         "price": 29.99,
         "style": "baggy",
-        "quantity": 6,
+        "quantity": 2,
         "num_purchased": 0,
     },
     "shirt:3": {
