@@ -1,5 +1,8 @@
 """
 Show how to use cursor and scan to iterate through keys.
+Show how to use pipelines, where you can group commands
+together, so they are sent to DB all at once.  This can
+reduce network cost and latency.
 """
 
 import redis

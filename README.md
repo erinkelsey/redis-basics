@@ -8,4 +8,4 @@ Redis has built-in replication, Lua scripting, LRU eviction, transactions and di
 
 ## Commands
 
-Check the commands folder for a list of common commands, data type commands, transactions ...
+Check the commands folder for a list of common commands, data type commands, transactions, and publishers and subscribers.
