@@ -1,3 +1,7 @@
+"""
+Show how to use cursor and scan to iterate through keys.
+"""
+
 import redis
 
 # connect and reset db
